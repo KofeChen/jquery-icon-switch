@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>icon-switch</title>
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_1305246_zz03xfu289f.css">
+    <style>
+        .container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            border: 2px solid #1296db;
+            border-radius: 3px;
+        }
+        .iconfont {
+            font-size: 22px;
+            color: #1296db;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <i class="iconfont icon-play"></i>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script>
+        $('.iconfont').on('click', function() {
+            if($(this).hasClass('icon-play')) {
+                $(this).removeClass('icon-play')
+                       .addClass('icon-stop')
+            }
+            else {
+                $(this).removeClass('icon-stop')
+                       .addClass('icon-play')
+            }
+        })
+    </script>
+</body>
+</html>

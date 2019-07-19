@@ -13,11 +13,11 @@
             padding: 20px;
             border: 2px solid #1296db;
             border-radius: 3px;
+            cursor: pointer;
         }
         .iconfont {
             font-size: 22px;
             color: #1296db;
-            cursor: pointer;
         }
     </style>
 </head>
@@ -28,7 +28,7 @@
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script>
-        $('.iconfont').on('click', function() {
+        /*$('.iconfont').on('click', function() {
             if($(this).hasClass('icon-play')) {
                 $(this).removeClass('icon-play')
                        .addClass('icon-stop')
@@ -37,6 +37,11 @@
                 $(this).removeClass('icon-stop')
                        .addClass('icon-play')
             }
+        })*/
+        
+        $('.container').on('click', function(){
+            var $icon = $(this).find('.iconfont')
+            $icon.toggleClass('icon-pause').toggleClass('icon-play')
         })
     </script>
 </body>
